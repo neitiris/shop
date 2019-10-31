@@ -1,0 +1,32 @@
+<div class="products-container">
+  <ul class="product--list">
+    <li class="product--list_item" *ngFor="let product of productsList">
+      <article class="item--article">
+        <h2 class="item--header">{{product.name}}</h2>
+        <p>{{product.label}}</p>
+        <p class="item--price">${{product.price.toFixed(2)}}</p>
+        <form class="item--form" name="form{{product.id}}}" (submit)="addToBucket($event, product.id)">
+          <label class="item--form--label">
+            <span>
+              Select count:
+            <input
+              class="item--count-input"
+              type="number"
+              min="1"
+              value="1"
+              name="count{{product.id}}"
+              (change)="productCount($event, product.id)"
+            >
+            </span>
+            <button
+              class="item--button"
+              type="submit"
+            >
+              Add to Bucket
+            </button>
+          </label>
+        </form>
+      </article>
+    </li>
+  </ul>
+</div>

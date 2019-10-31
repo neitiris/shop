@@ -1,0 +1,15 @@
+<div class="App">
+  <header class="header">
+    <a class="logo btn-container-link" routerLink="/">Logo</a>
+    <a class="btn-container-link" routerLink="/bucket">
+      <img class="bucket--btn-img" src="../assets/img/306793.svg" alt="bucket">
+      {{totalInBucket}} items || {{sumOfBucket}}$
+    </a>
+  </header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <footer>
+
+  </footer>
+</div>

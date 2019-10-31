@@ -1,0 +1,59 @@
+<div class="bucket--container">
+  <table class="bucket--table" *ngIf="notEmpty">
+    <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Quantity</th>
+      <th>Amount</th>
+      <th>Total</th>
+    </tr>
+    </thead>
+    <tr *ngFor="let item of bucketList" class="bucket--table-row">
+      <td class="dell-btn--cell">
+        <button
+          class="dell-btn"
+          type="button"
+          (click)="changeCount(item.id, 'null')"
+        >
+          <img class="dell-btn-img" src="../../../assets/img/close.png" alt="">
+        </button>
+      </td>
+      <td>
+        {{item.title}}
+      </td>
+      <td class="num-cell bucket--change-cell">
+        <button
+          class="bucket--change bucket--change-less"
+          type="button"
+          (click)="changeCount(item.id, -1)"
+          [disabled]="item.count === 1"
+        >
+          -
+        </button>
+        {{item.count}}
+        <button
+          type="button"
+          class="bucket--change"
+          (click)="changeCount(item.id, 1)"
+        >
+          +
+        </button>
+      </td>
+      <td class="num-cell">
+        {{item.price}} $
+      </td>
+      <td class="num-cell">
+        {{(item.price * item.count).toFixed(2)}} $
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="num-cell">Total:</td>
+      <td class="num-cell">{{this.sharedService.sumOfBucket.toFixed(2)}} $</td>
+    </tr>
+  </table>
+  <div class="bucket--notification" *ngIf="!notEmpty">Bucket is empty</div>
+</div>

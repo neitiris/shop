@@ -1,0 +1,76 @@
+.bucket--container {
+  display: flex;
+}
+
+.bucket--notification {
+  text-align: center;
+  font-size: 17px;
+  color: #a40000;
+  margin: auto;
+}
+
+.bucket--table {
+  max-width: 700px;
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.bucket--table-row {
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  background: white;
+}
+
+.num-cell {
+   text-align: center;
+}
+
+.bucket--table-row:nth-child(2) {
+  background: #f9f9f9;
+}
+
+.bucket--table td,
+.bucket--table th
+{
+  padding: 8px;
+  font-size: 14px;
+}
+.bucket--change {
+  background: none;
+  border: none;
+  font-weight: bolder;
+  font-size: 20px;
+  cursor: pointer;
+  padding:  0 5px;
+}
+.bucket--change-less {
+  padding:  0 5px 2px;;
+}
+
+.bucket--change-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dell-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+
+.dell-btn-img {
+  height: 20px;
+  width: 20px;
+}
+
+.dell-btn--cell {
+  width: 25px;
+}
